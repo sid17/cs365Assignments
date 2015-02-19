@@ -1,0 +1,24 @@
+Overfitting and Complex Models
+
+What to do
+
+You are given four files:
+h1_train_small.csv
+h1_train_big.csv
+h1_validate.csv
+h1_test.csv
+These files contain data in two columns: "Time" and "Height". This data represents height measurements for dropping a ball down for a fixed amount of time.
+What to submit
+
+In each of cases below, you should plot a graph for each of these models to demonstrate, visually, how well the curve fits the data. Provide a graph of Error vs. Polynomial Degree for both (small and big) datasets.
+A. Use the h1_train_small.csv file to train polynomials of degrees N= 0, 1, 2, 3, 5, and 9 (minimally). You should plot the accuracy on the training set and compare it with that on the h1_test.csv test data. Also tabulate the coefficients of your polynomials for these different N (as in Table 1.1 from Bishop, page 8).
+B. You will then use the h1_validate.csv validation dataset and plot the error on this for the different polynomials. You should report the optimal degree N as suggested by the validation, and the final error, tested on the h1_test.csv test data, for your optimal model.
+C. You will now use the larger training set h1_train_big dataset, and observe the differences with the test set results. What N is suggested now by the training set? Is there any benefit to using a validation set in this case?
+Finally, analyze why you are getting the results you have. What is your best guess for the target function (which is, of course, a quadratic)? What is the difference between Test data and Validation data?
+Provide all the code you have used for every step in the assignment.
+Submission Process
+
+Submissions should be through your course webpage:
+home.iitk.ac.in/~USERID/cs365/hw1/index.html
+This hw1/ directory should contain all images etc. related to this assignment.
+NOTE: Please do not use global references e.g. <a href="home.iitk.ac.in/~USERID/cs365/FILE">). Instead use local paths ( <a href="FILE">).

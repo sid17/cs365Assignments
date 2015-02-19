@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Artificial Intelligence Assignment 0!</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+    <link rel="canonical" href="http://yourdomain.com/jekyll/update/2015/01/13/Artificial%20Intelligence%20Assignment%200/">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+
+    <body>
+
+
+    <div class="page-content">
+      <div class="wrap">
+      <div class="post">
+
+  <header class="post-header">
+    <h1>Artificial Intelligence Assignment 0!</h1>
+    <p class="meta">Jan 13, 2015</p>
+  </header>
+
+  <article class="post-content">
+  <h2 id="playing-doctor-in-emacs">Playing Doctor in Emacs</h2>
+
+<h3 id="part1-where-then-answers-seem-reasonable">Part1: Where then answers seem reasonable</h3>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">I</span> <span class="n">am</span> <span class="n">the</span> <span class="n">psychotherapist</span><span class="o">.</span>  <span class="no">Please</span><span class="p">,</span> <span class="n">describe</span> <span class="n">your</span> <span class="n">problems</span><span class="o">.</span>  <span class="no">Each</span> <span class="n">time</span>
+<span class="n">you</span> <span class="n">are</span> <span class="n">finished</span> <span class="n">talking</span><span class="p">,</span> <span class="n">type</span> <span class="no">RET</span> <span class="n">twice</span><span class="o">.</span>
+
+<span class="n">I</span> <span class="n">am</span> <span class="n">sad</span>
+
+<span class="no">Why</span> <span class="k">do</span> <span class="n">you</span> <span class="n">say</span> <span class="n">you</span> <span class="n">are</span> <span class="n">sad?</span>
+
+<span class="n">I</span> <span class="n">have</span> <span class="ow">not</span> <span class="n">done</span> <span class="n">my</span> <span class="n">assignment</span>
+
+<span class="no">Is</span> <span class="n">it</span> <span class="n">because</span> <span class="n">of</span> <span class="n">your</span> <span class="n">plans</span> <span class="n">that</span> <span class="n">you</span> <span class="n">say</span> <span class="n">you</span> <span class="n">have</span> <span class="ow">not</span> <span class="n">done</span> <span class="n">your</span>
+<span class="n">assignment?</span>
+
+<span class="no">Yes</span>
+
+<span class="n">I</span> <span class="n">see</span><span class="o">.</span><span class="n">.</span><span class="o">.</span>  <span class="no">Well</span><span class="p">,</span> <span class="n">what</span> <span class="n">makes</span> <span class="n">you</span> <span class="n">believe</span> <span class="n">this</span> <span class="n">is</span> <span class="n">so?</span>
+
+<span class="no">Because</span> <span class="n">I</span> <span class="n">was</span> <span class="n">on</span> <span class="n">a</span> <span class="n">leave</span>
+
+<span class="no">Is</span> <span class="n">it</span> <span class="n">because</span> <span class="n">you</span> <span class="n">were</span> <span class="n">on</span> <span class="n">a</span> <span class="n">leave</span> <span class="n">that</span> <span class="n">you</span> <span class="n">came</span> <span class="n">to</span> <span class="n">me?</span>
+
+<span class="no">Yes</span>
+
+<span class="no">Yes</span><span class="p">,</span> <span class="n">hmmm</span><span class="o">.</span><span class="n">.</span><span class="o">.</span> <span class="n">so</span><span class="p">,</span> <span class="n">are</span> <span class="n">you</span> <span class="n">sure</span> <span class="n">that</span> <span class="n">this</span> <span class="n">is</span> <span class="n">so?</span>
+
+<span class="no">No</span><span class="p">,</span> <span class="n">I</span> <span class="n">am</span> <span class="ow">not</span> <span class="n">sure</span>
+
+<span class="no">Maybe</span> <span class="n">your</span> <span class="n">life</span> <span class="n">has</span> <span class="n">something</span> <span class="n">to</span> <span class="k">do</span> <span class="n">with</span> <span class="n">this</span><span class="o">.</span>
+
+<span class="n">I</span> <span class="n">am</span> <span class="ow">not</span> <span class="n">sure</span> <span class="n">what</span> <span class="n">to</span> <span class="k">do</span> <span class="k">in</span> <span class="n">life</span>
+
+<span class="no">Do</span> <span class="n">you</span> <span class="n">really</span> <span class="n">think</span> <span class="n">that?</span>
+
+<span class="no">Yes</span><span class="p">,</span> <span class="n">I</span> <span class="n">think</span> <span class="n">so</span> <span class="o">.</span> <span class="n">I</span> <span class="n">am</span> <span class="ow">not</span> <span class="n">sure</span> <span class="n">of</span> <span class="n">my</span> <span class="n">internship</span>
+
+<span class="no">Earlier</span> <span class="n">you</span> <span class="n">said</span> <span class="n">you</span> <span class="n">were</span> <span class="n">on</span> <span class="n">a</span> <span class="n">leave?</span>
+
+<span class="n">I</span> <span class="n">am</span> <span class="n">confused</span></code></pre></div>
+
+<h3 id="part2-where-the-answers-dont-make-sense">Part2: Where the answers don’t make sense</h3>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">I</span> <span class="n">am</span> <span class="n">feeling</span> <span class="n">tired</span><span class="o">.</span>
+
+<span class="no">Why</span> <span class="k">do</span> <span class="n">you</span> <span class="n">say</span> <span class="n">you</span> <span class="n">are</span> <span class="n">feeling</span> <span class="n">tired?</span>
+
+<span class="no">Because</span> <span class="n">I</span> <span class="n">had</span> <span class="n">been</span> <span class="n">travelling</span> <span class="k">in</span> <span class="n">train</span> <span class="k">for</span> <span class="n">two</span> <span class="n">days</span> <span class="ow">and</span> <span class="n">cannot</span> <span class="nb">sleep</span><span class="o">.</span>
+
+<span class="no">Is</span> <span class="n">it</span> <span class="n">because</span> <span class="n">you</span> <span class="n">had</span> <span class="n">been</span> <span class="n">travelling</span> <span class="k">in</span> <span class="n">train</span> <span class="k">for</span> <span class="n">two</span> <span class="n">days</span> <span class="ow">and</span> <span class="n">cannot</span>
+<span class="nb">sleep</span> <span class="n">that</span> <span class="n">you</span> <span class="n">came</span> <span class="n">to</span> <span class="n">me?</span>
+
+<span class="no">Yes</span>
+
+<span class="n">I</span> <span class="n">see</span><span class="o">.</span><span class="n">.</span><span class="o">.</span>  <span class="no">Well</span><span class="p">,</span> <span class="n">what</span> <span class="n">makes</span> <span class="n">you</span> <span class="n">believe</span> <span class="n">this</span> <span class="n">is</span> <span class="n">so?</span>
+
+<span class="no">Because</span> <span class="n">I</span> <span class="n">have</span> <span class="n">only</span> <span class="n">slept</span> <span class="k">for</span> <span class="mi">3</span> <span class="n">hours</span> <span class="n">yesterday</span> <span class="ow">and</span> <span class="n">its</span> <span class="mi">2</span> <span class="no">AM</span> <span class="ow">and</span> <span class="n">I</span>
+<span class="n">have</span> <span class="n">come</span> <span class="n">to</span> <span class="n">seek</span> <span class="n">your</span> <span class="n">advice</span>
+
+<span class="no">Does</span> <span class="n">it</span> <span class="n">bother</span> <span class="n">you</span> <span class="n">that</span> <span class="n">you</span> <span class="n">have</span> <span class="n">only</span> <span class="n">slept</span> <span class="k">for</span> <span class="mi">3</span> <span class="n">hours</span> <span class="n">yesterday</span> <span class="ow">and</span>
+<span class="n">its</span> <span class="mi">2</span> <span class="n">are</span> <span class="ow">and</span> <span class="n">you</span> <span class="n">have</span> <span class="n">come</span> <span class="n">to</span> <span class="n">seek</span> <span class="n">my</span> <span class="n">advice?</span>
+
+<span class="no">Yes</span>
+
+<span class="no">Yes</span><span class="p">,</span> <span class="n">hmmm</span><span class="o">.</span><span class="n">.</span><span class="o">.</span> <span class="n">so</span><span class="p">,</span> <span class="n">are</span> <span class="n">you</span> <span class="n">sure</span> <span class="n">that</span> <span class="n">this</span> <span class="n">is</span> <span class="n">so?</span>
+
+<span class="no">Yes</span>
+
+<span class="n">I</span> <span class="n">understand</span><span class="o">.</span>  <span class="no">So</span> <span class="k">do</span> <span class="n">you</span> <span class="n">really</span> <span class="n">think</span> <span class="n">this</span> <span class="n">is</span> <span class="n">so?</span>
+
+<span class="no">Yes</span>
+
+<span class="no">Oh</span><span class="o">.</span> <span class="o">.</span><span class="n">.</span><span class="o">.</span><span class="n">And</span> <span class="n">what</span> <span class="n">makes</span> <span class="n">you</span> <span class="n">think</span> <span class="n">this</span> <span class="n">is</span> <span class="n">so?</span>
+
+<span class="n">I</span> <span class="n">already</span> <span class="n">told</span> <span class="n">you</span> <span class="n">about</span> <span class="n">this</span>
+
+<span class="no">Earlier</span> <span class="n">you</span> <span class="n">said</span> <span class="n">you</span> <span class="n">had</span> <span class="n">been</span> <span class="n">travelling</span> <span class="k">in</span> <span class="n">train</span> <span class="k">for</span> <span class="n">two</span> <span class="n">days</span> <span class="ow">and</span>
+<span class="n">cannot</span> <span class="nb">sleep</span><span class="p">?</span>
+
+<span class="no">Yes</span> <span class="p">,</span> <span class="n">I</span> <span class="n">said</span> <span class="n">that</span>
+
+<span class="no">Can</span> <span class="n">you</span> <span class="n">elaborate</span> <span class="n">on</span> <span class="n">that?</span>
+
+<span class="n">I</span> <span class="n">would</span> <span class="n">appreciate</span> <span class="n">it</span> <span class="k">if</span> <span class="n">you</span> <span class="n">would</span> <span class="n">continue</span><span class="o">.</span>
+
+<span class="no">Maybe</span> <span class="n">your</span> <span class="n">life</span> <span class="n">has</span> <span class="n">something</span> <span class="n">to</span> <span class="k">do</span> <span class="n">with</span> <span class="n">this</span><span class="o">.</span>
+
+<span class="n">I</span> <span class="n">was</span> <span class="n">at</span> <span class="n">symposium</span> <span class="n">at</span> <span class="no">Bangalore</span> <span class="ow">and</span> <span class="no">Bangalore</span> <span class="n">is</span> <span class="n">quite</span> <span class="n">far</span><span class="o">.</span><span class="n">Thus</span> <span class="n">I</span> <span class="n">had</span>
+<span class="n">to</span> <span class="n">travel</span>
+
+<span class="no">Why</span> <span class="k">do</span> <span class="n">you</span> <span class="n">say</span> <span class="n">that?</span>
+
+<span class="no">You</span> <span class="n">are</span> <span class="n">asking</span> <span class="n">the</span> <span class="n">same</span> <span class="n">questions</span> <span class="n">again</span> <span class="ow">and</span> <span class="n">again</span>
+
+<span class="no">You</span> <span class="n">mentioned</span> <span class="n">that</span> <span class="n">you</span> <span class="n">have</span> <span class="n">only</span> <span class="n">slept</span> <span class="k">for</span> <span class="mi">3</span> <span class="n">hours</span> <span class="n">yesterday</span> <span class="ow">and</span> <span class="n">its</span> <span class="mi">2</span>
+<span class="n">are</span> <span class="ow">and</span> <span class="n">you</span> <span class="n">have</span> <span class="n">come</span> <span class="n">to</span> <span class="n">seek</span> <span class="n">my</span> <span class="n">advice?</span>
+
+<span class="n">I</span> <span class="n">am</span> <span class="n">feeling</span> <span class="n">frustrated</span> <span class="n">because</span> <span class="n">of</span> <span class="n">your</span> <span class="n">questions</span>
+
+<span class="no">Are</span> <span class="n">you</span> <span class="n">frustrated</span> <span class="n">often?</span>
+
+<span class="no">No</span>
+
+<span class="no">Why</span> <span class="ow">not</span><span class="p">?</span>
+
+<span class="n">I</span> <span class="n">am</span> <span class="n">frustrated</span> <span class="n">now</span>
+
+<span class="no">What</span> <span class="n">causes</span> <span class="n">you</span> <span class="n">to</span> <span class="n">be</span> <span class="n">frustrated?</span>
+
+<span class="no">You</span>
+
+<span class="no">Go</span> <span class="n">on</span><span class="p">,</span> <span class="n">don</span><span class="err">&#39;</span><span class="n">t</span> <span class="n">be</span> <span class="n">afraid</span><span class="o">.</span>
+
+<span class="n">I</span> <span class="n">am</span> <span class="ow">not</span> <span class="n">afraid</span>
+
+<span class="no">What</span> <span class="n">makes</span> <span class="n">you</span> <span class="n">believe</span> <span class="n">you</span> <span class="n">are</span> <span class="n">afraid</span> <span class="n">of</span> <span class="n">something?</span>
+
+<span class="no">Bye</span> <span class="p">,</span> <span class="n">I</span> <span class="n">dont</span> <span class="n">want</span> <span class="n">to</span> <span class="n">talk</span> <span class="n">to</span> <span class="n">you</span>
+
+<span class="no">My</span> <span class="n">secretary</span> <span class="n">will</span> <span class="nb">send</span> <span class="n">you</span> <span class="n">a</span> <span class="n">bill</span><span class="o">.</span>
+
+<span class="no">Ok</span><span class="p">,</span> <span class="ow">and</span> <span class="n">I</span> <span class="n">will</span> <span class="ow">not</span> <span class="n">pay</span> <span class="n">you</span>
+
+<span class="no">Perhaps</span> <span class="n">your</span> <span class="n">plans</span> <span class="n">have</span> <span class="n">something</span> <span class="n">to</span> <span class="k">do</span> <span class="n">with</span> <span class="n">this</span><span class="o">.</span>
+
+<span class="no">No</span>
+
+<span class="no">Are</span> <span class="n">you</span> <span class="n">annoyed</span> <span class="n">that</span> <span class="n">I</span> <span class="n">ask</span> <span class="n">that?</span>
+
+<span class="no">Yes</span>
+
+<span class="n">I</span> <span class="n">see</span><span class="o">.</span><span class="n">.</span><span class="o">.</span>  <span class="no">Then</span> <span class="n">are</span> <span class="n">you</span> <span class="n">sure</span> <span class="n">that</span> <span class="n">this</span> <span class="n">is</span> <span class="n">so?</span>
+
+<span class="no">Yes</span>
+
+<span class="no">Yes</span><span class="p">,</span> <span class="n">well</span><span class="p">,</span> <span class="k">do</span> <span class="n">you</span> <span class="n">really</span> <span class="n">think</span> <span class="n">this</span> <span class="n">is</span> <span class="n">so?</span>
+
+<span class="no">Yes</span>
+
+<span class="n">I</span> <span class="n">understand</span><span class="o">.</span>  <span class="no">Hmmm</span><span class="o">.</span><span class="n">.</span><span class="o">.</span> <span class="n">so</span><span class="p">,</span> <span class="n">what</span> <span class="n">makes</span> <span class="n">you</span> <span class="n">think</span> <span class="n">this</span> <span class="n">is</span> <span class="n">so?</span>
+
+<span class="no">Bye</span>
+
+<span class="no">Bye</span> <span class="n">bye</span><span class="o">.</span>
+
+
+<span class="no">See</span> <span class="n">ya</span><span class="o">.</span>
+
+
+<span class="no">Is</span> <span class="n">it</span> <span class="n">because</span> <span class="n">of</span> <span class="n">the</span> <span class="n">people</span> <span class="n">you</span> <span class="n">hang</span> <span class="n">around</span> <span class="n">with</span> <span class="n">that</span> <span class="n">you</span> <span class="n">say</span> <span class="n">see</span> <span class="n">me?</span></code></pre></div>
+
+<!-- Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll's GitHub repo][jekyll-gh].
+
+[jekyll-gh]: https://github.com/jekyll/jekyll
+[jekyll]:    http://jekyllrb.com
+ -->
+
+<p>The reply for the above program is highly deterministic in nature and it does not answer on the basis of context of the conversation. It has limited knowledge and ask questions and provides replies based on the keywords present in user input. 
+For example, it asks specific set of questions if it finds the keyword alcohol, irrespective of context.</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">I</span> <span class="n">work</span> <span class="k">in</span> <span class="n">shop</span> <span class="n">which</span> <span class="n">sells</span> <span class="n">scotch</span>
+
+<span class="no">Do</span> <span class="n">you</span> <span class="n">drink</span> <span class="n">a</span> <span class="n">lot</span> <span class="n">of</span> <span class="n">scotch?</span></code></pre></div>
+
+<p>The above reply is on account of the following actions by the program taken on user input.</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="p">(</span><span class="n">doctor</span><span class="o">-</span><span class="n">put</span><span class="o">-</span><span class="n">meaning</span> <span class="n">rum</span> <span class="s1">&#39;alcohol)</span>
+<span class="s1">(doctor-put-meaning gin &#39;</span><span class="n">alcohol</span><span class="p">)</span>
+<span class="p">(</span><span class="n">doctor</span><span class="o">-</span><span class="n">put</span><span class="o">-</span><span class="n">meaning</span> <span class="n">vodka</span> <span class="s1">&#39;alcohol)</span>
+<span class="s1">(doctor-put-meaning alcohol &#39;</span><span class="n">alcohol</span><span class="p">)</span>
+<span class="p">(</span><span class="n">doctor</span><span class="o">-</span><span class="n">put</span><span class="o">-</span><span class="n">meaning</span> <span class="n">bourbon</span> <span class="s1">&#39;alcohol)</span>
+<span class="s1">(doctor-put-meaning beer &#39;</span><span class="n">alcohol</span><span class="p">)</span>
+<span class="p">(</span><span class="n">doctor</span><span class="o">-</span><span class="n">put</span><span class="o">-</span><span class="n">meaning</span> <span class="n">wine</span> <span class="s1">&#39;alcohol)</span>
+<span class="s1">(doctor-put-meaning whiskey &#39;</span><span class="n">alcohol</span><span class="p">)</span>
+<span class="p">(</span><span class="n">doctor</span><span class="o">-</span><span class="n">put</span><span class="o">-</span><span class="n">meaning</span> <span class="n">scotch</span> <span class="err">&#39;</span><span class="n">alcohol</span><span class="p">)</span></code></pre></div>
+
+<p>It specifies similar kind of objects to lie in a particular class and takes similar kind of actions for the whole class of objects.
+For example,Once it has found the class alcohol, it associates following reply to it </p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="p">(</span><span class="n">setq</span> <span class="n">drnk</span>
+        <span class="err">&#39;</span><span class="p">((</span><span class="k">do</span> <span class="n">you</span> <span class="n">drink</span> <span class="n">a</span> <span class="n">lot</span> <span class="n">of</span> <span class="p">(</span><span class="sr">//</span> <span class="n">found</span><span class="p">)</span> <span class="p">\</span><span class="sc">?)</span>
+          <span class="p">(</span><span class="k">do</span> <span class="n">you</span> <span class="n">get</span> <span class="n">drunk</span> <span class="n">often</span> <span class="p">\</span><span class="sc">?)</span>
+          <span class="p">((</span><span class="err">$</span> <span class="n">describe</span><span class="p">)</span> <span class="n">your</span> <span class="n">drinking</span> <span class="n">habits</span> <span class="p">\</span><span class="o">.</span><span class="p">)</span> <span class="p">))</span></code></pre></div>
+
+<p>It formulates similar kind of questions for very long and short answers depending on the length. This is clear in the code snippet given below</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="p">(</span><span class="n">defun</span> <span class="n">doctor</span><span class="o">-</span><span class="n">huh</span> <span class="p">()</span>
+  <span class="p">(</span><span class="n">cond</span> <span class="p">((</span><span class="o">&lt;</span> <span class="p">(</span><span class="n">length</span> <span class="n">sent</span><span class="p">)</span> <span class="mi">9</span><span class="p">)</span> <span class="p">(</span><span class="n">doctor</span><span class="o">-</span><span class="n">type</span> <span class="p">(</span><span class="err">$</span> <span class="n">huhlst</span><span class="p">)))</span>
+        <span class="p">(</span><span class="n">t</span> <span class="p">(</span><span class="n">doctor</span><span class="o">-</span><span class="n">type</span> <span class="p">(</span><span class="err">$</span> <span class="n">longhuhlst</span><span class="p">)))))</span>
+
+
+<span class="p">(</span><span class="n">setq</span> <span class="n">huhlst</span>
+<span class="err">&#39;</span><span class="p">(((</span><span class="err">$</span> <span class="n">whysay</span><span class="p">)(</span><span class="sr">//</span> <span class="n">sent</span><span class="p">)</span> <span class="p">\</span><span class="sc">?)</span>
+  <span class="p">(</span><span class="n">is</span> <span class="n">it</span> <span class="n">because</span> <span class="n">of</span> <span class="p">(</span><span class="err">$</span> <span class="n">things</span><span class="p">)</span> <span class="n">that</span> <span class="n">you</span> <span class="n">say</span> <span class="p">(</span><span class="sr">//</span> <span class="n">sent</span><span class="p">)</span> <span class="p">\</span><span class="sc">?)</span> <span class="p">))</span></code></pre></div>
+
+<p>Similarly for short answers say ‘Yes’, it formulates another set of fixed replies.</p>
+
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="p">(</span><span class="n">cond</span> <span class="p">((</span><span class="n">equal</span> <span class="n">sent</span> <span class="p">(</span><span class="n">doctor</span><span class="o">-</span><span class="n">assm</span> <span class="s1">&#39;(yes)))</span>
+<span class="s1">                (doctor-type &#39;</span><span class="p">((</span><span class="err">$</span> <span class="n">isee</span><span class="p">)</span> <span class="p">(</span><span class="err">$</span> <span class="n">inter</span><span class="p">)</span> <span class="p">(</span><span class="err">$</span> <span class="n">whysay</span><span class="p">)</span> <span class="n">this</span> <span class="n">is</span> <span class="n">so</span> <span class="p">\</span><span class="sc">?)</span><span class="p">))</span>
+               <span class="p">((</span><span class="n">equal</span> <span class="n">sent</span> <span class="p">(</span><span class="n">doctor</span><span class="o">-</span><span class="n">assm</span> <span class="s1">&#39;(because)))</span>
+<span class="s1">                (doctor-type ($ shortbeclst)))</span>
+<span class="s1">               ((equal sent (doctor-assm &#39;</span><span class="p">(</span><span class="n">no</span><span class="p">)))</span>
+                <span class="p">(</span><span class="n">doctor</span><span class="o">-</span><span class="n">type</span> <span class="p">(</span><span class="err">$</span> <span class="n">neglst</span><span class="p">)))</span>
+               <span class="p">(</span><span class="n">t</span> <span class="p">(</span><span class="n">doctor</span><span class="o">-</span><span class="n">type</span> <span class="p">(</span><span class="err">$</span> <span class="n">shortlst</span><span class="p">)))))))</span>
+
+
+ <span class="p">(</span><span class="n">make</span><span class="o">-</span><span class="n">local</span><span class="o">-</span><span class="n">variable</span> <span class="s1">&#39;shortlst)</span>
+<span class="s1">  (setq shortlst</span>
+<span class="s1">        &#39;</span><span class="p">((</span><span class="n">can</span> <span class="n">you</span> <span class="n">elaborate</span> <span class="n">on</span> <span class="n">that</span> <span class="p">\</span><span class="sc">?)</span>
+          <span class="p">((</span><span class="err">$</span> <span class="n">please</span><span class="p">)</span> <span class="n">continue</span> <span class="p">\</span><span class="o">.</span><span class="p">)</span>
+          <span class="p">(</span><span class="n">go</span> <span class="n">on</span><span class="p">\,</span> <span class="n">don</span><span class="p">\</span><span class="s1">&#39;t be afraid \.)</span>
+<span class="s1">          (i need a little more detail please \.)</span>
+<span class="s1">          (you\&#39;re being a bit brief\, ($ please) go into detail \.)</span>
+<span class="s1">          (can you be more explicit \?)</span>
+<span class="s1">          (and \?)</span>
+<span class="s1">          (($ please) go into more detail \?)</span>
+<span class="s1">          (you aren\&#39;</span><span class="n">t</span> <span class="n">being</span> <span class="n">very</span> <span class="n">talkative</span> <span class="n">today</span><span class="p">\</span><span class="o">!</span><span class="p">)</span>
+          <span class="p">(</span><span class="n">is</span> <span class="n">that</span> <span class="n">all</span> <span class="n">there</span> <span class="n">is</span> <span class="n">to</span> <span class="n">it</span> <span class="p">\</span><span class="sc">?)</span>
+          <span class="p">(</span><span class="n">why</span> <span class="n">must</span> <span class="n">you</span> <span class="n">respond</span> <span class="n">so</span> <span class="n">briefly</span> <span class="p">\</span><span class="sc">?)</span><span class="p">))</span></code></pre></div>
+
+<p>Thus the questions sequence and the reply are often not consistent with the context in which the questions are asked by the user. Thus the questions does not make sense in many instances.</p>
+
+<p>The program may be improved by the following methods:</p>
+
+<ul>
+  <li>Taking into account the sentiment assosiated with the user input</li>
+  <li>Incorporate models where it can learn replies from large corpus of human conversations and adapt to a different kinds of input</li>
+  <li>Trying to understand the context of the question rather than doing analysis on basis of certain keywords </li>
+</ul>
+
+  </article>
+
+</div>
+      </div>
+    </div>
+
+
+    </body>
+</html>

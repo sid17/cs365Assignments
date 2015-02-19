@@ -1,0 +1,13 @@
+Dimensionality Reduction
+
+You are given ~140 frames from a video of a person turning her head. You need to consider three approaches towards reducing the dimensionality of this dataset. Link for dataset : hw2-updated.tar.gz
+A. Linear dimensionality Reduction : Principal Components
+
+Here you need to obtain the first k principal components of the images. Note that the image vector size (d) is = 115 x 144 = 16560, whereas the number of images (n) is far less. If X is the image covariance matrix (dxn), then, the rank of the covariance matrix is ??? n, and at most n eigenvalues / eigenvectors are meaningful. These can be obtained by solving for the eigenvectors e'i of the nxn covariance matrix XTX instead of the huge dxd matrix XXT. The eigenvectors ei of the original data are then obtained as Xe'i. This is equivalent to taking the left singular values from the Singular Value Decomposition of X. Try reconstructing image 25 as a linear sum of the discovered eigenvectors. Show the reconstructed faces for low-dimensional embedding in m=2,10, 30, 80 dimensions.
+B. Nonlinear Dimensionality Reduction (Isomap)
+
+Here you are to use the Isomap algorithm for NLDR. You should try target dimensions 1 to 10 and report which has the most likely based on residual variance. Show the images in the local neighbourhood of image 25 in this manifold space. Show the manifold in 2-d - and zoom in on the images in the neighbourhood of image 10, and also label some other images in the map and discuss the nature of your manifold.
+C. Kernel PCA (Optional)
+
+You are to find a non-linear manifold for the face data using kernel PCA. Here you can try the same 2-d map as in part B and discuss what the manifold distribution of the data looks like. The objective of this part is to explore the ideas in kernel spaces. To encourage you to do so, some extra credit - say about 10%, would be given for people attempting this part.
+

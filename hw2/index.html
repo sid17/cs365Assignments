@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Artificial Intelligence: Assignment2</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content=".">
+    <link rel="canonical" href="http://home.iitk.ac.in/~smanocha/cs365/hw2/">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+
+    <body>
+
+
+    <div class="page-content">
+      <div class="wrap">
+      <div class="post">
+
+  <header class="post-header">
+    <h1>Artificial Intelligence: Assignment2</h1>
+    <p class="meta">Feb 8, 2015</p>
+  </header>
+
+  <article class="post-content">
+  <!-- For the given assignment we assume that we have real valued variables x and y, and given an unknown value of x, we have to find the corresponding y. We use polynomial fiting for the purpose and consider polynomials of varying degree.
+
+In all the cases considered below, we use a0 as the constant in the polynomial. -->
+
+<p>Link to the complete code <a href="http://home.iitk.ac.in/~smanocha/cs365/hw2/code">AI:HW2 Code</a></p>
+
+<h2 id="a-linear-dimensionality-reduction--principal-components">A. Linear dimensionality Reduction : Principal Components</h2>
+
+<h3 id="lower-dimensional-embedding-pcadimension2">Lower Dimensional Embedding (PCA,dimension=2)</h3>
+
+<p><img src="images/pca_embed.png" style="width:60%" /></p>
+
+<h3 id="reconstruction-approach-1">Reconstruction Approach 1</h3>
+
+<p>In the given approach, we reconstruct back the image 25 from its lower dimensional embedding using the eigen vectors. This involves multiplication of the lower dimensional embedding with the transpose of the projection matrix(since it will be orthogonal)</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00025.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="images/image2_r.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="images/image10_r.jpg" style="width:100%" /></th>
+      <th><img src="images/image30_r.jpg" style="width:100%" /></th>
+      <th><img src="images/image80_r.jpg" style="width:100%" /></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Original Image</td>
+      <td style="text-align: center">Reconstruction(d=2)</td>
+      <td style="text-align: center">Reconstruction(d=10)</td>
+      <td>Reconstruction(d=30)</td>
+      <td>Reconstruction(d=80)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="reconstruction-approach-2">Reconstruction Approach 2</h3>
+
+<p>In the given approach, we find the nearest neighbours of the image 25 in lower dimensional space and since original image vectors in higher dimension is known to us, we construct the image 25 by weighted average (by inverse of distance ) of the nearest neighbours</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00025.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="images/image2_o.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="images/image10_o.jpg" style="width:100%" /></th>
+      <th><img src="images/image30_o.jpg" style="width:100%" /></th>
+      <th><img src="images/image80_o.jpg" style="width:100%" /></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Original Image</td>
+      <td style="text-align: center">Reconstruction(d=2)</td>
+      <td style="text-align: center">Reconstruction(d=10)</td>
+      <td>Reconstruction(d=30)</td>
+      <td>Reconstruction(d=80)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="reconstruction-approach-3">Reconstruction Approach 3</h3>
+
+<p>In the given approach, we find the nearest neighbours of the image 25 in lower dimensional space and since reconstruct the higher dimensional embedding from the lower dimensional embedding for the nearest neighbours. We use weighted average of these reconstructed image to estimate image 25</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00025.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="images/image2_or.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="images/image10_or.jpg" style="width:100%" /></th>
+      <th><img src="images/image30_or.jpg" style="width:100%" /></th>
+      <th><img src="images/image80_or.jpg" style="width:100%" /></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Original Image</td>
+      <td style="text-align: center">Reconstruction(d=2)</td>
+      <td style="text-align: center">Reconstruction(d=10)</td>
+      <td>Reconstruction(d=30)</td>
+      <td>Reconstruction(d=80)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="plot-of-percentage-variance-retained-by-pca">Plot of Percentage Variance Retained by PCA</h3>
+<p><img src="images/pca.png" style="width:60%" /></p>
+
+<h2 id="bnonlinear-dimensionality-reduction-isomap">B.Nonlinear Dimensionality Reduction (Isomap)</h2>
+
+<h3 id="graph-of-residual-variance-vs-dimension">Graph of Residual Variance vs Dimension</h3>
+
+<p><img src="images/isomap_implement.png" style="width:60%" /></p>
+
+<h3 id="isomapdimensionality2">ISOMAP(Dimensionality=2)</h3>
+
+<p><img src="images/iso_embed_25.png" style="width:60%" /></p>
+
+<h4 id="nearestneighborsimage25">NearestNeighbors(Image25)</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00025.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00095.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00024.jpg" style="width:100%" /></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Original Image</td>
+      <td style="text-align: center">Neighbour1</td>
+      <td style="text-align: center">Neighbour2</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00026.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00093.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00027.jpg" style="width:100%" /></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Neighbour3</td>
+      <td style="text-align: center">Neighbour4</td>
+      <td style="text-align: center">Neighbour5</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="images/iso_embed_10.png" style="width:60%" /></p>
+
+<h4 id="nearestneighborsimage10">NearestNeighbors(Image10)</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00010.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00009.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00008.jpg" style="width:100%" /></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Original Image</td>
+      <td style="text-align: center">Neighbour1</td>
+      <td style="text-align: center">Neighbour2</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00007.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00001.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00011.jpg" style="width:100%" /></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Neighbour3</td>
+      <td style="text-align: center">Neighbour4</td>
+      <td style="text-align: center">Neighbour5</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="images/nn10.png" style="width:60%" /></p>
+
+<h3 id="nature-of-manifold">Nature of Manifold</h3>
+
+<p>Ideally, the manifold should be one dimensional since only one parameter is required to describe different images in space, that is the angle by which the head rotates.But the data may not necessarily be linear. Isomap does non linear dimensionality reduction for the dataset and represents the data very well in two dimensional embedding retaining the similarities among various points. Similar looking points are close to each other and it is well seperated from the points that are far apart. We can see three different line segments such that along one of them, we have points when head is straight, one captures the the points where head is turned left while along the other line we have points where the head is turned right. Thus isomap gives a good two dimensional embedding for the given high dimensional data.</p>
+
+<h2 id="c-kernel-pca">C. Kernel PCA</h2>
+
+<h3 id="kernel-pcadimensionality2rbf-kernel">KERNEL PCA(Dimensionality=2,RBF Kernel)</h3>
+
+<p><img src="images/kpca_embed.png" style="width:60%" /></p>
+
+<h4 id="nearestneighborsimage25-1">NearestNeighbors(Image25)</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00025.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00024.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00145.jpg" style="width:100%" /></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Original Image</td>
+      <td style="text-align: center">Neighbour1</td>
+      <td style="text-align: center">Neighbour2</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00230.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00079.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00109.jpg" style="width:100%" /></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Neighbour3</td>
+      <td style="text-align: center">Neighbour4</td>
+      <td style="text-align: center">Neighbour5</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="nearestneighborsimage10-1">NearestNeighbors(Image10)</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00010.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00186.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00043.jpg" style="width:100%" /></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Original Image</td>
+      <td style="text-align: center">Neighbour1</td>
+      <td style="text-align: center">Neighbour2</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00184.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00061.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00007.jpg" style="width:100%" /></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Neighbour3</td>
+      <td style="text-align: center">Neighbour4</td>
+      <td style="text-align: center">Neighbour5</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="kernel-pcadimensionality2linear-kernel">KERNEL PCA(Dimensionality=2,Linear Kernel)</h3>
+
+<p><img src="images/linear.png" style="width:60%" /></p>
+
+<h4 id="nearestneighborsimage25-2">NearestNeighbors(Image25)</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00025.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00026.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00093.jpg" style="width:100%" /></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Original Image</td>
+      <td style="text-align: center">Neighbour1</td>
+      <td style="text-align: center">Neighbour2</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00024.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00095.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00027.jpg" style="width:100%" /></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Neighbour3</td>
+      <td style="text-align: center">Neighbour4</td>
+      <td style="text-align: center">Neighbour5</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="nearestneighborsimage10-2">NearestNeighbors(Image10)</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00010.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00009.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00008.jpg" style="width:100%" /></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Original Image</td>
+      <td style="text-align: center">Neighbour1</td>
+      <td style="text-align: center">Neighbour2</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00011.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00012.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00013.jpg" style="width:100%" /></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Neighbour3</td>
+      <td style="text-align: center">Neighbour4</td>
+      <td style="text-align: center">Neighbour5</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="kernel-pcadimensionality2polynomial-kernel">KERNEL PCA(Dimensionality=2,Polynomial Kernel)</h3>
+
+<p><img src="images/poly.png" style="width:60%" /></p>
+
+<h4 id="nearestneighborsimage25-3">NearestNeighbors(Image25)</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00025.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00026.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00024.jpg" style="width:100%" /></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Original Image</td>
+      <td style="text-align: center">Neighbour1</td>
+      <td style="text-align: center">Neighbour2</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00027.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00093.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00023.jpg" style="width:100%" /></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Neighbour3</td>
+      <td style="text-align: center">Neighbour4</td>
+      <td style="text-align: center">Neighbour5</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="nearestneighborsimage10-3">NearestNeighbors(Image10)</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00010.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00009.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00011.jpg" style="width:100%" /></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Original Image</td>
+      <td style="text-align: center">Neighbour1</td>
+      <td style="text-align: center">Neighbour2</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00012.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00008.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00007.jpg" style="width:100%" /></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Neighbour3</td>
+      <td style="text-align: center">Neighbour4</td>
+      <td style="text-align: center">Neighbour5</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="kernel-pcadimensionality2cosine-kernel">KERNEL PCA(Dimensionality=2,Cosine Kernel)</h3>
+
+<p><img src="images/cosine.png" style="width:60%" /></p>
+
+<h4 id="nearestneighborsimage25-4">NearestNeighbors(Image25)</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00025.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00095.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00026.jpg" style="width:100%" /></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Original Image</td>
+      <td style="text-align: center">Neighbour1</td>
+      <td style="text-align: center">Neighbour2</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00024.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00093.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00027.jpg" style="width:100%" /></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Neighbour3</td>
+      <td style="text-align: center">Neighbour4</td>
+      <td style="text-align: center">Neighbour5</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="nearestneighborsimage10-4">NearestNeighbors(Image10)</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00010.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00009.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00008.jpg" style="width:100%" /></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Original Image</td>
+      <td style="text-align: center">Neighbour1</td>
+      <td style="text-align: center">Neighbour2</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00011.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00012.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="images/hw2_updated/scene00013.jpg" style="width:100%" /></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Neighbour3</td>
+      <td style="text-align: center">Neighbour4</td>
+      <td style="text-align: center">Neighbour5</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="discussion">Discussion</h3>
+
+<p>From the graphs of the lower dimensional embedding for various kernel in kernel PCA, it is clear that rbf kernel does not give good results and different looking points in high dimension cannot be distinguished in low dimension. </p>
+
+<p>While in case of linear, cosine, and polynomial kernels, the lower dimensional embedding captures the similarity among various points.It is also evident from the KNN(K nearest neighbours) results that similarities between points is retained in the lower dimensional embedding during Kernel PCA using the above mentioned kernels.</p>
+
+
+  </article>
+
+</div>
+      </div>
+    </div>
+
+   
+
+    </body>
+</html>

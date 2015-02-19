@@ -1,0 +1,240 @@
+
+###Dimensionality=1
+
+####NearestNeighbors(Image25)
+
+| <img src="/images/hw2_updated/scene00190.jpg"  style="width:100%">  |<img src="/images/hw2_updated/scene00020.jpg"  style="width:100%"> |<img src="/images/hw2_updated/scene00210.jpg"  style="width:100%"> |
+|:-----------------:|:-----------:|:-----------:|
+| Original Image              |Neighbour1 |Neighbour2 |
+
+| <img src="/images/hw2_updated/scene00016.jpg"  style="width:100%">  |<img src="/images/hw2_updated/scene00099.jpg"  style="width:100%"> |<img src="/images/hw2_updated/scene00143.jpg"  style="width:100%"> |
+|:-----------------:|:-----------:|:-----------:|
+| Neighbour3             |Neighbour4 |Neighbour5 |
+
+
+####NearestNeighbors(Image10)
+
+| <img src="/images/hw2_updated/scene00087.jpg"  style="width:100%">  |<img src="/images/hw2_updated/scene00246.jpg"  style="width:100%"> |<img src="/images/hw2_updated/scene00115.jpg"  style="width:100%"> |
+|:-----------------:|:-----------:|:-----------:|
+| Original Image              |Neighbour1 |Neighbour2 |
+
+| <img src="/images/hw2_updated/scene00228.jpg"  style="width:100%">  |<img src="/images/hw2_updated/scene00036.jpg"  style="width:100%"> |<img src="/images/hw2_updated/scene00051.jpg"  style="width:100%"> |
+|:-----------------:|:-----------:|:-----------:|
+| Neighbour3             |Neighbour4 |Neighbour5 |
+
+
+###Dimensionality=2
+
+####NearestNeighbors(Image25)
+
+| <img src="/images/hw2_updated/scene00190.jpg"  style="width:100%">  |<img src="/images/hw2_updated/scene00206.jpg"  style="width:100%"> |<img src="/images/hw2_updated/scene00069.jpg"  style="width:100%"> |
+|:-----------------:|:-----------:|:-----------:|
+| Original Image              |Neighbour1 |Neighbour2 |
+
+| <img src="/images/hw2_updated/scene00008.jpg"  style="width:100%">  |<img src="/images/hw2_updated/scene00009.jpg"  style="width:100%"> |<img src="/images/hw2_updated/scene00158.jpg"  style="width:100%"> |
+|:-----------------:|:-----------:|:-----------:|
+| Neighbour3             |Neighbour4 |Neighbour5 |
+
+
+####NearestNeighbors(Image10)
+
+| <img src="/images/hw2_updated/scene00087.jpg"  style="width:100%">  |<img src="/images/hw2_updated/scene00050.jpg"  style="width:100%"> |<img src="/images/hw2_updated/scene00228.jpg"  style="width:100%"> |
+|:-----------------:|:-----------:|:-----------:|
+| Original Image              |Neighbour1 |Neighbour2 |
+
+| <img src="/images/hw2_updated/scene00046.jpg"  style="width:100%">  |<img src="/images/hw2_updated/scene00035.jpg"  style="width:100%"> |<img src="/images/hw2_updated/scene00135.jpg"  style="width:100%"> |
+|:-----------------:|:-----------:|:-----------:|
+| Neighbour3             |Neighbour4 |Neighbour5 |
+
+
+###Dimensionality=3
+
+####NearestNeighbors(Image25)
+
+| <img src="/images/hw2_updated/scene00190.jpg"  style="width:100%">  |<img src="/images/hw2_updated/scene00065.jpg"  style="width:100%"> |<img src="/images/hw2_updated/scene00045.jpg"  style="width:100%"> |
+|:-----------------:|:-----------:|:-----------:|
+| Original Image              |Neighbour1 |Neighbour2 |
+
+| <img src="/images/hw2_updated/scene00014.jpg"  style="width:100%">  |<img src="/images/hw2_updated/scene00044.jpg"  style="width:100%"> |<img src="/images/hw2_updated/scene00063.jpg"  style="width:100%"> |
+|:-----------------:|:-----------:|:-----------:|
+| Neighbour3             |Neighbour4 |Neighbour5 |
+
+
+####NearestNeighbors(Image10)
+
+| <img src="/images/hw2_updated/scene00087.jpg"  style="width:100%">  |<img src="/images/hw2_updated/scene00208.jpg"  style="width:100%"> |<img src="/images/hw2_updated/scene00123.jpg"  style="width:100%"> |
+|:-----------------:|:-----------:|:-----------:|
+| Original Image              |Neighbour1 |Neighbour2 |
+
+| <img src="/images/hw2_updated/scene00103.jpg"  style="width:100%">  |<img src="/images/hw2_updated/scene00230.jpg"  style="width:100%"> |<img src="/images/hw2_updated/scene00040.jpg"  style="width:100%"> |
+|:-----------------:|:-----------:|:-----------:|
+| Neighbour3             |Neighbour4 |Neighbour5 |
+
+
+###Dimensionality=4
+
+####NearestNeighbors(Image25)
+
+| <img src="/images/hw2_updated/scene00190.jpg"  style="width:100%">  |<img src="/images/hw2_updated/scene00045.jpg"  style="width:100%"> |<img src="/images/hw2_updated/scene00014.jpg"  style="width:100%"> |
+|:-----------------:|:-----------:|:-----------:|
+| Original Image              |Neighbour1 |Neighbour2 |
+
+| <img src="/images/hw2_updated/scene00065.jpg"  style="width:100%">  |<img src="/images/hw2_updated/scene00063.jpg"  style="width:100%"> |<img src="/images/hw2_updated/scene00188.jpg"  style="width:100%"> |
+|:-----------------:|:-----------:|:-----------:|
+| Neighbour3             |Neighbour4 |Neighbour5 |
+
+
+####NearestNeighbors(Image10)
+
+| <img src="/images/hw2_updated/scene00087.jpg"  style="width:100%">  |<img src="/images/hw2_updated/scene00123.jpg"  style="width:100%"> |<img src="/images/hw2_updated/scene00166.jpg"  style="width:100%"> |
+|:-----------------:|:-----------:|:-----------:|
+| Original Image              |Neighbour1 |Neighbour2 |
+
+| <img src="/images/hw2_updated/scene00018.jpg"  style="width:100%">  |<img src="/images/hw2_updated/scene00208.jpg"  style="width:100%"> |<img src="/images/hw2_updated/scene00162.jpg"  style="width:100%"> |
+|:-----------------:|:-----------:|:-----------:|
+| Neighbour3             |Neighbour4 |Neighbour5 |
+
+
+###Dimensionality=5
+
+####NearestNeighbors(Image25)
+
+| <img src="/images/hw2_updated/scene00190.jpg"  style="width:100%">  |<img src="/images/hw2_updated/scene00014.jpg"  style="width:100%"> |<img src="/images/hw2_updated/scene00063.jpg"  style="width:100%"> |
+|:-----------------:|:-----------:|:-----------:|
+| Original Image              |Neighbour1 |Neighbour2 |
+
+| <img src="/images/hw2_updated/scene00188.jpg"  style="width:100%">  |<img src="/images/hw2_updated/scene00015.jpg"  style="width:100%"> |<img src="/images/hw2_updated/scene00067.jpg"  style="width:100%"> |
+|:-----------------:|:-----------:|:-----------:|
+| Neighbour3             |Neighbour4 |Neighbour5 |
+
+
+####NearestNeighbors(Image10)
+
+| <img src="/images/hw2_updated/scene00087.jpg"  style="width:100%">  |<img src="/images/hw2_updated/scene00050.jpg"  style="width:100%"> |<img src="/images/hw2_updated/scene00020.jpg"  style="width:100%"> |
+|:-----------------:|:-----------:|:-----------:|
+| Original Image              |Neighbour1 |Neighbour2 |
+
+| <img src="/images/hw2_updated/scene00133.jpg"  style="width:100%">  |<img src="/images/hw2_updated/scene00164.jpg"  style="width:100%"> |<img src="/images/hw2_updated/scene00026.jpg"  style="width:100%"> |
+|:-----------------:|:-----------:|:-----------:|
+| Neighbour3             |Neighbour4 |Neighbour5 |
+
+
+###Dimensionality=6
+
+####NearestNeighbors(Image25)
+
+| <img src="/images/hw2_updated/scene00190.jpg"  style="width:100%">  |<img src="/images/hw2_updated/scene00188.jpg"  style="width:100%"> |<img src="/images/hw2_updated/scene00075.jpg"  style="width:100%"> |
+|:-----------------:|:-----------:|:-----------:|
+| Original Image              |Neighbour1 |Neighbour2 |
+
+| <img src="/images/hw2_updated/scene00015.jpg"  style="width:100%">  |<img src="/images/hw2_updated/scene00073.jpg"  style="width:100%"> |<img src="/images/hw2_updated/scene00014.jpg"  style="width:100%"> |
+|:-----------------:|:-----------:|:-----------:|
+| Neighbour3             |Neighbour4 |Neighbour5 |
+
+
+####NearestNeighbors(Image10)
+
+| <img src="/images/hw2_updated/scene00087.jpg"  style="width:100%">  |<img src="/images/hw2_updated/scene00050.jpg"  style="width:100%"> |<img src="/images/hw2_updated/scene00047.jpg"  style="width:100%"> |
+|:-----------------:|:-----------:|:-----------:|
+| Original Image              |Neighbour1 |Neighbour2 |
+
+| <img src="/images/hw2_updated/scene00061.jpg"  style="width:100%">  |<img src="/images/hw2_updated/scene00018.jpg"  style="width:100%"> |<img src="/images/hw2_updated/scene00164.jpg"  style="width:100%"> |
+|:-----------------:|:-----------:|:-----------:|
+| Neighbour3             |Neighbour4 |Neighbour5 |
+
+
+###Dimensionality=7
+
+####NearestNeighbors(Image25)
+
+| <img src="/images/hw2_updated/scene00190.jpg"  style="width:100%">  |<img src="/images/hw2_updated/scene00188.jpg"  style="width:100%"> |<img src="/images/hw2_updated/scene00015.jpg"  style="width:100%"> |
+|:-----------------:|:-----------:|:-----------:|
+| Original Image              |Neighbour1 |Neighbour2 |
+
+| <img src="/images/hw2_updated/scene00014.jpg"  style="width:100%">  |<img src="/images/hw2_updated/scene00012.jpg"  style="width:100%"> |<img src="/images/hw2_updated/scene00011.jpg"  style="width:100%"> |
+|:-----------------:|:-----------:|:-----------:|
+| Neighbour3             |Neighbour4 |Neighbour5 |
+
+
+####NearestNeighbors(Image10)
+
+| <img src="/images/hw2_updated/scene00087.jpg"  style="width:100%">  |<img src="/images/hw2_updated/scene00047.jpg"  style="width:100%"> |<img src="/images/hw2_updated/scene00164.jpg"  style="width:100%"> |
+|:-----------------:|:-----------:|:-----------:|
+| Original Image              |Neighbour1 |Neighbour2 |
+
+| <img src="/images/hw2_updated/scene00099.jpg"  style="width:100%">  |<img src="/images/hw2_updated/scene00050.jpg"  style="width:100%"> |<img src="/images/hw2_updated/scene00018.jpg"  style="width:100%"> |
+|:-----------------:|:-----------:|:-----------:|
+| Neighbour3             |Neighbour4 |Neighbour5 |
+
+
+###Dimensionality=8
+
+####NearestNeighbors(Image25)
+
+| <img src="/images/hw2_updated/scene00190.jpg"  style="width:100%">  |<img src="/images/hw2_updated/scene00188.jpg"  style="width:100%"> |<img src="/images/hw2_updated/scene00192.jpg"  style="width:100%"> |
+|:-----------------:|:-----------:|:-----------:|
+| Original Image              |Neighbour1 |Neighbour2 |
+
+| <img src="/images/hw2_updated/scene00186.jpg"  style="width:100%">  |<img src="/images/hw2_updated/scene00206.jpg"  style="width:100%"> |<img src="/images/hw2_updated/scene00184.jpg"  style="width:100%"> |
+|:-----------------:|:-----------:|:-----------:|
+| Neighbour3             |Neighbour4 |Neighbour5 |
+
+
+####NearestNeighbors(Image10)
+
+| <img src="/images/hw2_updated/scene00087.jpg"  style="width:100%">  |<img src="/images/hw2_updated/scene00099.jpg"  style="width:100%"> |<img src="/images/hw2_updated/scene00093.jpg"  style="width:100%"> |
+|:-----------------:|:-----------:|:-----------:|
+| Original Image              |Neighbour1 |Neighbour2 |
+
+| <img src="/images/hw2_updated/scene00141.jpg"  style="width:100%">  |<img src="/images/hw2_updated/scene00252.jpg"  style="width:100%"> |<img src="/images/hw2_updated/scene00026.jpg"  style="width:100%"> |
+|:-----------------:|:-----------:|:-----------:|
+| Neighbour3             |Neighbour4 |Neighbour5 |
+
+
+###Dimensionality=9
+
+####NearestNeighbors(Image25)
+
+| <img src="/images/hw2_updated/scene00190.jpg"  style="width:100%">  |<img src="/images/hw2_updated/scene00188.jpg"  style="width:100%"> |<img src="/images/hw2_updated/scene00186.jpg"  style="width:100%"> |
+|:-----------------:|:-----------:|:-----------:|
+| Original Image              |Neighbour1 |Neighbour2 |
+
+| <img src="/images/hw2_updated/scene00192.jpg"  style="width:100%">  |<img src="/images/hw2_updated/scene00184.jpg"  style="width:100%"> |<img src="/images/hw2_updated/scene00063.jpg"  style="width:100%"> |
+|:-----------------:|:-----------:|:-----------:|
+| Neighbour3             |Neighbour4 |Neighbour5 |
+
+
+####NearestNeighbors(Image10)
+
+| <img src="/images/hw2_updated/scene00087.jpg"  style="width:100%">  |<img src="/images/hw2_updated/scene00133.jpg"  style="width:100%"> |<img src="/images/hw2_updated/scene00164.jpg"  style="width:100%"> |
+|:-----------------:|:-----------:|:-----------:|
+| Original Image              |Neighbour1 |Neighbour2 |
+
+| <img src="/images/hw2_updated/scene00021.jpg"  style="width:100%">  |<img src="/images/hw2_updated/scene00149.jpg"  style="width:100%"> |<img src="/images/hw2_updated/scene00212.jpg"  style="width:100%"> |
+|:-----------------:|:-----------:|:-----------:|
+| Neighbour3             |Neighbour4 |Neighbour5 |
+
+
+###Dimensionality=10
+
+####NearestNeighbors(Image25)
+
+| <img src="/images/hw2_updated/scene00190.jpg"  style="width:100%">  |<img src="/images/hw2_updated/scene00188.jpg"  style="width:100%"> |<img src="/images/hw2_updated/scene00192.jpg"  style="width:100%"> |
+|:-----------------:|:-----------:|:-----------:|
+| Original Image              |Neighbour1 |Neighbour2 |
+
+| <img src="/images/hw2_updated/scene00186.jpg"  style="width:100%">  |<img src="/images/hw2_updated/scene00184.jpg"  style="width:100%"> |<img src="/images/hw2_updated/scene00232.jpg"  style="width:100%"> |
+|:-----------------:|:-----------:|:-----------:|
+| Neighbour3             |Neighbour4 |Neighbour5 |
+
+
+####NearestNeighbors(Image10)
+
+| <img src="/images/hw2_updated/scene00087.jpg"  style="width:100%">  |<img src="/images/hw2_updated/scene00164.jpg"  style="width:100%"> |<img src="/images/hw2_updated/scene00155.jpg"  style="width:100%"> |
+|:-----------------:|:-----------:|:-----------:|
+| Original Image              |Neighbour1 |Neighbour2 |
+
+| <img src="/images/hw2_updated/scene00040.jpg"  style="width:100%">  |<img src="/images/hw2_updated/scene00016.jpg"  style="width:100%"> |<img src="/images/hw2_updated/scene00105.jpg"  style="width:100%"> |
+|:-----------------:|:-----------:|:-----------:|
+| Neighbour3             |Neighbour4 |Neighbour5 |
+

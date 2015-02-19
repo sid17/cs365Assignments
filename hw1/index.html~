@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Artificial Intelligence: Assignment1</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+    <link rel="canonical" href="http://yourdomain.com/jekyll/update/2015/01/16/welcome-to-jekyll/">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+
+    <body>
+
+
+    <div class="page-content">
+      <div class="wrap">
+      <div class="post">
+
+  <header class="post-header">
+    <h1>Artificial Intelligence: Assignment1</h1>
+    <p class="meta">Jan 16, 2015</p>
+  </header>
+
+  <article class="post-content">
+  <p>For the given assignment we assume that we have real valued variables x and y, and given an unknown value of x, we have to find the corresponding y. We use polynomial fiting for the purpose and consider polynomials of varying degree.</p>
+
+<p>In all the cases considered below, we use a0 as the constant in the polynomial.</p>
+
+<p>Link to the complete code <a href="http://home.iitk.ac.in/~smanocha/cs365/hw1/code">AI:HW1 Code</a></p>
+
+<h2 id="coefficients-of-the-polynomial">Coefficients of the Polynomial</h2>
+
+<h4 id="smaller-training-set">Smaller Training Set</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Degree</th>
+      <th style="text-align: center">a0</th>
+      <th style="text-align: center">a1</th>
+      <th style="text-align: center">a2</th>
+      <th style="text-align: center">a3</th>
+      <th style="text-align: center">a4</th>
+      <th style="text-align: center">a5</th>
+      <th style="text-align: center">a6</th>
+      <th style="text-align: center">a7</th>
+      <th style="text-align: center">a8</th>
+      <th style="text-align: center">a9</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">156.450</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">-82.819</td>
+      <td style="text-align: center">50.372</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">27.887</td>
+      <td style="text-align: center">-0.930</td>
+      <td style="text-align: center">5.400</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">-85.143</td>
+      <td style="text-align: center">79.680</td>
+      <td style="text-align: center">-12.541</td>
+      <td style="text-align: center">1.259</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td style="text-align: center">5</td>
+      <td style="text-align: center">-6420.096</td>
+      <td style="text-align: center">7804.795</td>
+      <td style="text-align: center">-3647.899</td>
+      <td style="text-align: center">827.588</td>
+      <td style="text-align: center">-90.909</td>
+      <td style="text-align: center">3.882</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td style="text-align: center">9</td>
+      <td style="text-align: center">2079030.473</td>
+      <td style="text-align: center">-4377092.037</td>
+      <td style="text-align: center">4028322.855</td>
+      <td style="text-align: center">-2128283.175</td>
+      <td style="text-align: center">711845.774</td>
+      <td style="text-align: center">-156416.602</td>
+      <td style="text-align: center">22595.022</td>
+      <td style="text-align: center">-2070.437</td>
+      <td style="text-align: center">109.269</td>
+      <td style="text-align: center">-2.532</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="larger-training-set">Larger Training Set</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Degree</th>
+      <th style="text-align: center">a0</th>
+      <th style="text-align: center">a1</th>
+      <th style="text-align: center">a2</th>
+      <th style="text-align: center">a3</th>
+      <th style="text-align: center">a4</th>
+      <th style="text-align: center">a5</th>
+      <th style="text-align: center">a6</th>
+      <th style="text-align: center">a7</th>
+      <th style="text-align: center">a8</th>
+      <th style="text-align: center">a9</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">256.384</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">-166.284</td>
+      <td style="text-align: center">67.627</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">-19.499</td>
+      <td style="text-align: center">14.056</td>
+      <td style="text-align: center">4.286</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">27.562</td>
+      <td style="text-align: center">-12.824</td>
+      <td style="text-align: center">8.930</td>
+      <td style="text-align: center">-0.248</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td style="text-align: center">5</td>
+      <td style="text-align: center">353.084</td>
+      <td style="text-align: center">-321.411</td>
+      <td style="text-align: center">119.167</td>
+      <td style="text-align: center">-18.915</td>
+      <td style="text-align: center">1.509</td>
+      <td style="text-align: center">-0.047</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+      <td style="text-align: center">0.000</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td style="text-align: center">9</td>
+      <td style="text-align: center">2168.675</td>
+      <td style="text-align: center">-3575.612</td>
+      <td style="text-align: center">2619.872</td>
+      <td style="text-align: center">-1098.090</td>
+      <td style="text-align: center">289.252</td>
+      <td style="text-align: center">-49.143</td>
+      <td style="text-align: center">5.356</td>
+      <td style="text-align: center">-0.360</td>
+      <td style="text-align: center">0.013</td>
+      <td style="text-align: center">-0.000</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="graphical-representation-of-the-polynomials">Graphical Representation of the Polynomials</h2>
+
+<h4 id="polynomial-fitting-degree-0">Polynomial Fitting: Degree 0</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><img src="/images/image0_small.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="/images/image0_big.jpg" style="width:100%" /></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Smaller Training Set</td>
+      <td style="text-align: center">Larger Training Set</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="polynomial-fitting-degree-1">Polynomial Fitting: Degree 1</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><img src="/images/image1_small.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="/images/image1_big.jpg" style="width:100%" /></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Smaller Training Set</td>
+      <td style="text-align: center">Larger Training Set</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="polynomial-fitting-degree-2">Polynomial Fitting: Degree 2</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><img src="/images/image2_small.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="/images/image2_big.jpg" style="width:100%" /></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Smaller Training Set</td>
+      <td style="text-align: center">Larger Training Set</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="polynomial-fitting-degree-3">Polynomial Fitting: Degree 3</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><img src="/images/image3_small.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="/images/image3_big.jpg" style="width:100%" /></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Smaller Training Set</td>
+      <td style="text-align: center">Larger Training Set</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="polynomial-fitting-degree-5">Polynomial Fitting: Degree 5</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><img src="/images/image5_small.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="/images/image5_big.jpg" style="width:100%" /></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Smaller Training Set</td>
+      <td style="text-align: center">Larger Training Set</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="polynomial-fitting-degree-9">Polynomial Fitting: Degree 9</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><img src="/images/image9_small.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="/images/image9_big.jpg" style="width:100%" /></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Smaller Training Set</td>
+      <td style="text-align: center">Larger Training Set</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="error-analysis">Error Analysis</h2>
+
+<p>We plot the root mean square error.</p>
+
+<h4 id="error-values-on-training-set">Error Values on Training Set</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><img src="/images/error_s_s.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="/images/error_b_b.jpg" style="width:100%" /></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Smaller Training Set</td>
+      <td style="text-align: center">Larger Training Set</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Training Set</th>
+      <th style="text-align: center">Deg0</th>
+      <th style="text-align: center">Deg1</th>
+      <th style="text-align: center">Deg2</th>
+      <th style="text-align: center">Deg3</th>
+      <th style="text-align: center">Deg5</th>
+      <th style="text-align: center">Deg9</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Small</td>
+      <td style="text-align: center">74.010</td>
+      <td style="text-align: center">15.625</td>
+      <td style="text-align: center">12.161</td>
+      <td style="text-align: center">11.842</td>
+      <td style="text-align: center">3.843</td>
+      <td style="text-align: center">0.000</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Large</td>
+      <td style="text-align: center">149.874</td>
+      <td style="text-align: center">21.282</td>
+      <td style="text-align: center">10.621</td>
+      <td style="text-align: center">10.421</td>
+      <td style="text-align: center">10.300</td>
+      <td style="text-align: center">10.257</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="error-values-on-validation-set">Error Values on Validation Set</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><img src="/images/error_s_v.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="/images/error_b_v.jpg" style="width:100%" /></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Smaller Training Set</td>
+      <td style="text-align: center">Larger Training Set</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Training Set</th>
+      <th style="text-align: center">Deg0</th>
+      <th style="text-align: center">Deg1</th>
+      <th style="text-align: center">Deg2</th>
+      <th style="text-align: center">Deg3</th>
+      <th style="text-align: center">Deg5</th>
+      <th style="text-align: center">Deg9</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Small</td>
+      <td style="text-align: center">171.877</td>
+      <td style="text-align: center">44.857</td>
+      <td style="text-align: center">11.091</td>
+      <td style="text-align: center">32.868</td>
+      <td style="text-align: center">1585.756</td>
+      <td style="text-align: center">216579.900</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Large</td>
+      <td style="text-align: center">129.138</td>
+      <td style="text-align: center">16.419</td>
+      <td style="text-align: center">10.439</td>
+      <td style="text-align: center">10.686</td>
+      <td style="text-align: center">10.017</td>
+      <td style="text-align: center">10.130</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="error-values-on-test-set">Error Values on Test Set</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><img src="/images/error_s_t.jpg" style="width:100%" /></th>
+      <th style="text-align: center"><img src="/images/error_b_t.jpg" style="width:100%" /></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Smaller Training Set</td>
+      <td style="text-align: center">Larger Training Set</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Training Set</th>
+      <th style="text-align: center">Deg0</th>
+      <th style="text-align: center">Deg1</th>
+      <th style="text-align: center">Deg2</th>
+      <th style="text-align: center">Deg3</th>
+      <th style="text-align: center">Deg5</th>
+      <th style="text-align: center">Deg9</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Small</td>
+      <td style="text-align: center">629.411</td>
+      <td style="text-align: center">281.253</td>
+      <td style="text-align: center">24.913</td>
+      <td style="text-align: center">631.064</td>
+      <td style="text-align: center">162838.160</td>
+      <td style="text-align: center">827952046.750</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Large</td>
+      <td style="text-align: center">542.478</td>
+      <td style="text-align: center">166.930</td>
+      <td style="text-align: center">19.201</td>
+      <td style="text-align: center">77.050</td>
+      <td style="text-align: center">648.653</td>
+      <td style="text-align: center">4311.278</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="observations">Observations</h2>
+<ul>
+  <li>Optimal value for the Degree of Polynomial
+    <ul>
+      <li>Optimal Value of Degree of Polynomial N for small dataset
+        <ul>
+          <li>From Validation set: 2</li>
+          <li>From Test set: 2</li>
+        </ul>
+      </li>
+      <li>Optimal Value of Degree of Polynomial N for large dataset
+        <ul>
+          <li>From Validation set: 5</li>
+          <li>From Test set: 2</li>
+        </ul>
+      </li>
+    </ul>
+
+    <p>In case of smaller dataset, the optimal value of N is 2 and the results of the validation set and the test set match.
+  In case of larger dataset, the results for the value of N does not match for the test and the validation test. Hence the use of validation set does not have any advantage in the given case.
+  However a better choice of value of N is 2.
+  The optimal value for N, degree of the polynomial is 2.</p>
+  </li>
+  <li>Difference between Test Set and Validation Set
+    <ul>
+      <li>Validation Set is used to check how well our model has been made and is used to analyse the model for various values of the model parameters and set the values for those parameters. It is used to fix unknown parameters in the model for example, N in the given cases</li>
+      <li>Test Set: Test Set is the data that is used to check the efficiency and accuracy of our model. It gives an idea how well our model will perform when it is put to use for a specific application on any general data.</li>
+    </ul>
+  </li>
+  <li>Analysis of the results:
+ 	For the results stated above, in case of small dataset, the polynomial of degree 9 overfits the results. Since the training data consists of only 10 points, it tries to fit the training set as close as possible which leads to overfitting. As a results the model gives good results on training set and fauls badly in case of validation and test set.
+  However in case of the larger dataset, owing to the size of the dataset, it does not overfit the training set too much and the polynomial of degree 9 gives better results on the test and validation set if trained on a larger dataset.</li>
+  <li>Link to the complete code <a href="http://home.iitk.ac.in/~smanocha/cs365/hw1/code">AI:HW1 Code</a>.</li>
+</ul>
+
+<!-- 
+
+
+ -->
+
+  </article>
+
+</div>
+      </div>
+    </div>
+
+   
+
+    </body>
+</html>
